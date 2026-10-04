@@ -1,9 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 import router from './containerRoutes';
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
 app.use(express.json());
 
 // Koppel de container routes aan het '/api/containers' pad
